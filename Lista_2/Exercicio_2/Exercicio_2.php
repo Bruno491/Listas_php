@@ -9,34 +9,24 @@
 <body>
   <div class="container">
     <h1>Ler 7 números diferentes e imprimir o menor valor e a posição do menor valor na sequência de entrada</h1>
-    <form action="Exercicio_2.php" method="post">
-      <input type="number" name="number1" placeholder="Digite o primeiro número">
-      <input type="number" name="number2" placeholder="Digite o segundo número">
-      <input type="number" name="number3" placeholder="Digite o terceiro número">
-      <input type="number" name="number4" placeholder="Digite o quarto número">
-      <input type="number" name="number5" placeholder="Digite o quinto número">
-      <input type="number" name="number6" placeholder="Digite o sexto número">
-      <input type="number" name="number7" placeholder="Digite o sétimo número">
-      <input type="submit" value="Enviar">
-    </form>
-    <?php
-    if (isset($_POST['number1']) && isset($_POST['number2']) && isset($_POST['number3']) && isset($_POST['number4']) && isset($_POST['number5']) && isset($_POST['number6']) && isset($_POST['number7'])) {
-      $number1 = $_POST['number1'];
-      $number2 = $_POST['number2'];
-      $number3 = $_POST['number3'];
-      $number4 = $_POST['number4'];
-      $number5 = $_POST['number5'];
-      $number6 = $_POST['number6'];
-      $number7 = $_POST['number7'];
-    
-      $array = array($number1, $number2, $number3, $number4, $number5, $number6, $number7);
-    
-      $menor_valor = min($array);
-      $posicao_menor_valor = array_search($menor_valor, $array);
-    
-      echo "O menor valor é $menor_valor e está na posição $posicao_menor_valor";
-    }
-    ?>
+    <form action="Exercicio_2_resp.php" method="POST">
+      <?php
+        for($i=1; $i<=7; $i++){
+      ?>
+      <div class="col">
+        <label for="valor<?= $i ?>" class="form-label">
+            Informe o <?= $i ?>º valor
+        </label>
+        <input type="number" name="valor<?= $i ?>" id="valor<?= $i ?>" class="form-control">
+      </div>
+      <?php
+        }
+      ?>
+  </div>
+  <div class="row">
+    <div class="col">
+        <button type="submit" class="btn-danger">Ok</button>
+    </div>
   </div>
 </body>
 </html>
