@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+  
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .form-control-file {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Estilos específicos para o formulário enviado */
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-control-file p {
+    margin-top: 5px;
+  }
+  
+  /* Alterações para ficar mais próximo do que foi pedido */
+  
+  .container {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+  }
+  
+  .form-control {
+    border-color: #ccc;
+  }
+  
+  .btn {
+    background-color: #337ab7;
+    color: white;
+  }
